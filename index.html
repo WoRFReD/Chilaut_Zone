@@ -2,76 +2,125 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solicitud de Invitación a la Zona Chilaut</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zona Chilaut - Solicitud VIP</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #e6f7ff;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8ff;
       margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      background-color: #009688;
-      color: white;
       padding: 20px;
     }
-    img {
-      max-width: 90%;
-      height: auto;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .left-column, .right-column {
+      flex: 1 1 100%;
+    }
+    @media (min-width: 768px) {
+      .left-column, .right-column {
+        flex: 1 1 48%;
+      }
+    }
+    .left-column img {
+      width: 100%;
+      margin-bottom: 20px;
       border-radius: 10px;
-      margin: 20px 0;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    form {
+    .right-column {
       background: white;
       padding: 20px;
-      margin: 0 auto;
-      width: 90%;
-      max-width: 400px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    input, textarea, button {
+    h1 {
+      text-align: center;
+      color: #00796B;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #00796B;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    input, textarea {
       width: 100%;
-      margin: 10px 0;
       padding: 10px;
+      margin-bottom: 12px;
       border-radius: 5px;
       border: 1px solid #ccc;
+      font-size: 16px;
     }
-    button {
-      background-color: #009688;
+    .submit-button {
+      background-color: #00796B;
       color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
       font-weight: bold;
+      font-size: 16px;
       cursor: pointer;
+      width: 100%;
     }
     footer {
+      text-align: center;
+      font-size: 12px;
       margin-top: 30px;
-      color: #666;
-      font-size: 14px;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>¡Solicita tu acceso VIP a la Zona Chilaut!</h1>
-    <p>Porque nuestro amigo aún no nos invita... ¡vamos a ver si con esto se anima!</p>
-  </header>
 
-  <img src="file-4cPVS7yvCvVqBuEdYjCvAR" alt="Zona Chilaut de Lujo">
-  <img src="file-53yXQT6Syg9wsyEmDYpHWq" alt="Piscina prohibida para amigos">
+  <h1>Solicitud de Acceso a la Zona “Chilaut VIP”</h1>
 
-  <form>
-    <h2>Formulario de Solicitud Oficial</h2>
-    <input type="text" placeholder="Tu nombre completo" required>
-    <input type="email" placeholder="Correo para enviar la invitación (si algún día llega)" required>
-    <textarea placeholder="Razones por las que mereces una barbacoa en la Zona Chilaut" rows="4" required></textarea>
-    <button type="submit">¡Enviar súplica!</button>
-  </form>
+  <div class="container">
+    <div class="left-column">
+      <img src="file1.jpg" alt="Zona Chilaut de Lujo">
+      <img src="file2.jpg" alt="Piscina prohibida para amigos">
+    </div>
+
+    <div class="right-column">
+      <h2>Sólo para gente muy exclusiva. Muy. Pero muy, ¿eh?</h2>
+      <p>
+        ¡Bienvenido, alma errante en busca del paraíso terrenal! Estás a punto de solicitar el acceso al lugar más exclusivo desde que inventaron el pan con manteca colorá: <strong>la ZONA CHILAUT VIP</strong>. Un rincón donde el césped es más verde, las risas más sinceras y los botellines de Cruzcampo... más helados que el corazón de tu ex.
+      </p>
+      <p>
+        <strong>IMPORTANTE:</strong> No todos pueden entrar. De hecho, ni los mejores amigos. Esto es tan exclusivo, que hasta el dueño necesita permiso previo.
+      </p>
+      <p>
+        <strong>¿QUÉ TE ESPERA SI ERES ACEPTADO?</strong><br>
+        - Un sofá de mimbre donde se han tomado decisiones importantes como “¿otra ronda?” o “¿quién da la vuelta al chorizo?”<br>
+        - Cojines que han sido testigos de más siestas que un viernes en agosto.<br>
+        - Plantas elegidas personalmente por alguien que no tiene ni idea de jardinería, pero quedan fetén.<br>
+        - Una mesa que aguanta desde barbacoas hasta juegos de cartas de madrugada.<br>
+        - ¡Y LA JOYA DE LA CORONA! Una piscina de agua salada. Nada de cloro barato. Aquí te bañas como si estuvieras en las Maldivas… pero sin el jet lag.
+      </p>
+      <p>
+        <strong>REQUISITOS PARA LA INSCRIPCIÓN:</strong><br>
+        1. Traer botellines de Cruzcampo fríos, pero fríos de verdad, no “del tiempo”.<br>
+        2. Tener espíritu de barbacoa y alma de sofá.<br>
+        3. Jurar lealtad a la Zona Chilaut y prometer no contar lo bien que te lo pasaste (por respeto a los no invitados).
+      </p>
+
+      <form>
+        <input type="text" placeholder="Nombre del solicitante">
+        <input type="email" placeholder="Correo de contacto desesperado">
+        <textarea rows="4" placeholder="Explica por qué mereces ser parte del círculo VIP (se valoran chistes malos)"></textarea>
+        <button class="submit-button">¡Solicitar acceso (aunque sea para oler la barbacoa)!</button>
+      </form>
+    </div>
+  </div>
 
   <footer>
-    <p>*Nota: Enviar el formulario no garantiza absolutamente nada. Pero al menos lo intentamos.</p>
+    *Este documento no garantiza nada. Pero al menos queda constancia de que lo intentaste.
   </footer>
 </body>
 </html>
